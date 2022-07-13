@@ -10,7 +10,7 @@ const Login = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch(`${host}auth/login`, {
+    const response = await fetch(`https://thawing-inlet-57545.herokuapp.com/auth/login`, {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       headers: {
         "Content-Type": "application/json",
