@@ -14,7 +14,7 @@ const Signup = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch(`${host}auth/register`, {
+    const response = await fetch(`https://thawing-inlet-57545.herokuapp.com/auth/register`, {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       headers: {
         "Content-Type": "application/json",
@@ -26,7 +26,7 @@ const Signup = (props) => {
       }),
     });
     const json = await response.json();
-    console.log(json);
+    // console.log(json);
     if (json.success) {
       localStorage.setItem("token", json.authToken);
       navigate("/");

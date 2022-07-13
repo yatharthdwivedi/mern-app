@@ -9,7 +9,7 @@ const NoteState = (props) => {
   // GET ALL NOTE
   const getNotes = async () => {
     // API CALL
-    const response = await fetch(`${host}/notes/notes`, {
+    const response = await fetch(`https://thawing-inlet-57545.herokuapp.com/notes/notes`, {
       method: 'GET',
       headers: {
         "Content-Type": "application/json",
@@ -24,7 +24,7 @@ const NoteState = (props) => {
   // ADD A NOTE
   const addNote = async (title, description, tag) => {
     // API CALL
-    const response = await fetch(`${host}/notes/addnote`, {    
+    const response = await fetch(`https://thawing-inlet-57545.herokuapp.com/notes/addnote`, {    
    method: 'POST',
       headers: {
         "Content-Type": "application/json",
@@ -40,7 +40,7 @@ const NoteState = (props) => {
   // DELETE A NOTE
   const deleteNote = async (id) => {
     // API CALL
-    const response = await fetch(`${host}/notes/deletenote/${id}`, {
+    const response = await fetch(`https://thawing-inlet-57545.herokuapp.com/notes/deletenote/${id}`, {
       method: 'DELETE', // *GET, POST, PUT, DELETE, etc.
       headers: {
         "Content-Type": "application/json",
@@ -58,7 +58,7 @@ const NoteState = (props) => {
   const editNote = async (id, title, description, tag) => {
 
     // API CALL
-    const response = await fetch(`${host}/notes/updatenote/${id}`, {
+    const response = await fetch(`https://thawing-inlet-57545.herokuapp.com/notes/updatenote/${id}`, {
       method: 'PUT', 
       headers: {
         "Content-Type": "application/json",
